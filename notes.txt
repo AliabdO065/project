@@ -31,3 +31,6 @@ steps:
   complete making website arabic by making a file site.php in both ar and en folder , you will saw all of this in _aside.blade.php
 // another method to building dashboard
      we can use package to build the dashboard
+
+///////////////////////////////////////////////
+
