@@ -1,8 +1,14 @@
 <?php
+Route::group(
+    [
+        'prefix' => LaravelLocalization::setLocale(),
+        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
+    ], function(){
 
+        Route::prefix('dashboard')->name('dashboard.')->group(function () {
 
-Route::prefix('dashboard')->name('dashboard.')->group(function () {
+            Route::get('/index', 'dashboardController@index')->name('index');
+        
+        });
 
-    Route::get('/index', 'dashboardController@index')->name('index');
-
-});
+    });
